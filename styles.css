@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
+
+/* Global Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Body and Font Setup */
+body {
+  background: #222;
+  font-family: 'Bangers', cursive;
+  color: #fff;
+}
+
+/* Main App Container:
+   - Fills the viewport height
+   - Arranges child containers from top to bottom
+   - Spaces them out so Title is at top, Buttons at bottom, Quote & Fields in middle */
+.app-container {
+  min-height: 100vh;              /* Fill the full viewport height */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Title at top, Buttons at bottom, Quote/Fields in middle */
+  width: 90%;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background: linear-gradient(135deg, #ff0080, #ff8c00);
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 8px 15px rgba(0,0,0,0.3);
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* Simple fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Title Container */
+.title-container {
+  margin-bottom: 10px;
+}
+
+.title-container h1 {
+  font-size: 3rem;
+  text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+  transform: rotateX(10deg);
+  transition: transform 0.3s ease;
+}
+
+.title-container h1:hover {
+  transform: rotateX(0deg) scale(1.05);
+}
+
+/* Quote Container (middle) */
+.quote-container {
+  flex: 1;              /* Expand to fill available space between title and buttons */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0;
+}
+
+/* Quote style & potential animation class */
+#quote {
+  font-size: 2.5rem;
+  text-shadow: 3px 3px 6px rgba(0,0,0,0.5);
+  text-transform: none;
+  /* If you want to animate the quote on generation, you can add classes like .animate-quote */
+}
+
+/* Fields Container */
+.fields-container {
+  margin: 10px 0;
+}
+
+/* Each field in its own container */
+.field-container {
+  margin-bottom: 15px;
+}
+
+/* Example label & input styling */
+.field-container label {
+  font-size: 1.4rem;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.field-container input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  font-size: 1.2rem;
+  border: 2px solid #fff;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.field-container input[type="text"]:focus {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+  outline: none;
+}
+
+/* Radio Group styling */
+.radio-group {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* Buttons Container (bottom) */
+.buttons-container {
+  display: flex;
+  flex-wrap: wrap; /* If you want them side-by-side, but can wrap on small screens */
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+/* Each button in its own container */
+.button-container {
+  /* Minimal styling here; just used for layout spacing */
+}
+
+/* Button styles */
+button {
+  cursor: pointer;
+  border-radius: 10px;
+  border: none;
+  font-size: 1.5rem;
+  padding: 15px 30px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Different button colors */
+#start-btn {
+  background-color: #00c853;
+  color: #fff;
+}
+
+#generate-btn {
+  background-color: #fff;
+  color: #222;
+  font-family: 'Bangers', cursive;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+}
+
+#back-btn {
+  background-color: #ff5252;
+  color: #fff;
+}
+
+/* Hover effects for all buttons */
+button:hover {
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: 0 5px 10px rgba(0,0,0,0.3);
+}
+
+/* Responsive styling for tablets (max-width: 1024px) */
+@media screen and (max-width: 1024px) {
+  .title-container h1 {
+    font-size: 2.5rem;
+  }
+  #quote {
+    font-size: 2.2rem;
+  }
+  .field-container label {
+    font-size: 1.3rem;
+  }
+  button {
+    font-size: 1.3rem;
+    padding: 12px 25px;
+  }
+}
+
+/* Responsive styling for mobile (max-width: 600px) */
+@media screen and (max-width: 600px) {
+  .app-container {
+    padding: 15px;
+  }
+  .title-container h1 {
+    font-size: 2rem;
+  }
+  #quote {
+    font-size: 1.8rem;
+  }
+  .field-container label {
+    font-size: 1.2rem;
+  }
+  .field-container input[type="text"] {
+    font-size: 1rem;
+    padding: 8px;
+  }
+  button {
+    font-size: 1.1rem;
+    padding: 10px 20px;
+  }
+}

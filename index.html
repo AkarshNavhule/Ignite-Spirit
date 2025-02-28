@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ignite Spirit</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- Main App Container -->
+  <div class="app-container">
+
+    <!-- Title Container -->
+    <div class="title-container">
+      <h1>Ignite Spirit</h1>
+    </div>
+
+    <!-- Quote Container (middle of the page) -->
+    <div class="quote-container">
+      <!-- This is where your generated quote will appear -->
+      <div id="quote">Your quote will appear here...</div>
+    </div>
+
+    <!-- Fields Container (for user inputs) -->
+    <div class="fields-container">
+      <!-- Each field in its own sub-container -->
+      <div class="field-container">
+        <label for="name">Enter Your Name:</label>
+        <input type="text" id="name" />
+      </div>
+
+      <div class="field-container">
+        <label>Select Your Gender:</label>
+        <div class="radio-group">
+          <label>
+            <input type="radio" name="gender" value="male" /> Male
+          </label>
+          <label>
+            <input type="radio" name="gender" value="female" /> Female
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <!-- Buttons Container (bottom of the page) -->
+    <div class="buttons-container">
+      <!-- Each button in its own container -->
+      <div class="button-container">
+        <button id="generate-btn">Get Motivation</button>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
