@@ -52,7 +52,7 @@ body {
 }
 
 .title-container h1 {
-  font-size: 3rem;
+  font-size: 5rem;
   text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
   transform: rotateX(10deg);
   transition: transform 0.3s ease;
@@ -129,10 +129,6 @@ body {
   margin-top: 20px;
 }
 
-/* Each button in its own container */
-.button-container {
-  /* Minimal styling here; just used for layout spacing */
-}
 
 /* Button styles */
 button {
@@ -182,7 +178,7 @@ button:hover {
     padding: 15px;
   }
   .title-container h1 {
-    font-size: 2rem;
+    font-size: 4rem;
   }
   #quote {
     font-size: 2.7rem;
