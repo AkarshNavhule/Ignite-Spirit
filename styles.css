@@ -131,6 +131,10 @@ body {
   color: #fff;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+.field-container input[type="text"]::placeholder {
+  color: white;
+  opacity: 1;
+}
 
 .field-container input[type="text"]:focus {
   transform: scale(1.05);
