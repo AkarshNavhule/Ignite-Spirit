@@ -219,7 +219,8 @@ button:hover {
     padding: 8px;
   }
   button {
-    font-size: 1.1rem;
+    font-size: 2rem;
     padding: 10px 20px;
+    margin-bottom: 10px;
   }
 }
