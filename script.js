@@ -267,26 +267,38 @@ window.addEventListener("load", () => {
     // Retrieve stored name/gender or fallback
     const storedName = localStorage.getItem("userName") || "Friend";
     const storedGender = localStorage.getItem("userGender") || "";
-  
+
     let quote = "";
     if (storedGender === "male") {
-      const randomIndex = Math.floor(Math.random() * quotesMale.length);
-      quote = quotesMale[randomIndex];
+        const randomIndex = Math.floor(Math.random() * quotesMale.length);
+        quote = quotesMale[randomIndex];
     } else if (storedGender === "female") {
-      const randomIndex = Math.floor(Math.random() * quotesFemale.length);
-      quote = quotesFemale[randomIndex];
+        const randomIndex = Math.floor(Math.random() * quotesFemale.length);
+        quote = quotesFemale[randomIndex];
     } else {
-      quote = "Stay motivated, {name}!";
+        quote = "Stay motivated, {name}!";
     }
-  
+
     // Replace {name} placeholder with the user's name
     quote = quote.replace("{name}", storedName);
-  
+
+    // Get the quote element
+    const quoteEl = document.getElementById("quote");
+
+    // Remove previous animation class if present
+    quoteEl.classList.remove("animate-quote");
+
+    // Force reflow to reset animation
+    void quoteEl.offsetWidth;
+
+    // Add the animation class again to trigger animation
+    quoteEl.classList.add("animate-quote");
+
     // Display the quote
-    document.getElementById("quote").textContent = quote;
-  
+    quoteEl.textContent = quote;
+
     // Cache the last generated quote
     localStorage.setItem("lastQuote", quote);
-  });
-  
+});
+
   

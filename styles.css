@@ -19,7 +19,7 @@ body {
    - Arranges child containers from top to bottom
    - Spaces them out so Title is at top, Buttons at bottom, Quote & Fields in middle */
 .app-container {
-  min-height: 100vh;              /* Fill the full viewport height */
+  min-height: 100vh; /* Fill the full viewport height */
   display: flex;
   flex-direction: column;
   justify-content: space-between; /* Title at top, Buttons at bottom, Quote/Fields in middle */
@@ -64,19 +64,44 @@ body {
 
 /* Quote Container (middle) */
 .quote-container {
-  flex: 1;              /* Expand to fill available space between title and buttons */
+  flex: 1; /* Expand to fill available space between title and buttons */
   display: flex;
   justify-content: center;
   align-items: center;
   margin: 10px 0;
 }
 
-/* Quote style & potential animation class */
+/* Quote style */
 #quote {
   font-size: 2.5rem;
+  margin: 20px auto;
   text-shadow: 3px 3px 6px rgba(0,0,0,0.5);
   text-transform: none;
-  /* If you want to animate the quote on generation, you can add classes like .animate-quote */
+}
+
+/* 
+  --- ANIMATION FOR THE QUOTE ---
+  We define .animate-quote and keyframes
+  OUTSIDE any media queries so they apply
+  to all screen sizes.
+*/
+.animate-quote {
+  animation: zoomPop 0.6s ease-out forwards;
+}
+
+@keyframes zoomPop {
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  60% {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
 }
 
 /* Fields Container */
@@ -129,7 +154,6 @@ body {
   margin-top: 20px;
 }
 
-
 /* Button styles */
 button {
   cursor: pointer;
@@ -140,14 +164,12 @@ button {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-
 #generate-btn {
   background-color: #fff;
   color: #222;
   font-family: 'Bangers', cursive;
   box-shadow: 0 5px 10px rgba(0,0,0,0.2);
 }
-
 
 /* Hover effects for all buttons */
 button:hover {
