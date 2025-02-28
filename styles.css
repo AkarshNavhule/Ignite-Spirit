@@ -27,10 +27,10 @@ body {
   max-width: 600px;
   margin: 0 auto;
   padding: 20px;
-  background: linear-gradient(135deg, #ff0080, #ff8c00);
+  background: linear-gradient(135deg, #791f87, #b400eb);
   border-radius: 20px;
   text-align: center;
-  box-shadow: 0 8px 15px rgba(0,0,0,0.3);
+  box-shadow: 0 8px 15px rgba(210, 47, 47, 0.3);
   animation: fadeIn 1s ease-in-out;
 }
 
@@ -202,9 +202,10 @@ button:hover {
   .title-container h1 {
     margin-top: 40px;
     font-size: 4rem;
+    color: #ffdd00;
   }
   #quote {
-    font-size: 2.7rem;
+    font-size: 3rem;
   }
   .field-container label {
     font-size: 1.2rem;
