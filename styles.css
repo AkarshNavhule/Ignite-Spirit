@@ -140,15 +140,10 @@ button {
   border-radius: 10px;
   border: none;
   font-size: 1.5rem;
-  padding: 15px 30px;
+  padding: 20px 30px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Different button colors */
-#start-btn {
-  background-color: #00c853;
-  color: #fff;
-}
 
 #generate-btn {
   background-color: #fff;
@@ -157,10 +152,6 @@ button {
   box-shadow: 0 5px 10px rgba(0,0,0,0.2);
 }
 
-#back-btn {
-  background-color: #ff5252;
-  color: #fff;
-}
 
 /* Hover effects for all buttons */
 button:hover {
@@ -194,7 +185,7 @@ button:hover {
     font-size: 2rem;
   }
   #quote {
-    font-size: 1.8rem;
+    font-size: 2.7rem;
   }
   .field-container label {
     font-size: 1.2rem;
